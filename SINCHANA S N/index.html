@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Chandana Groups</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+ <link rel="stylesheet" href="chandana-style.css">
+<style> 
+ /* Inline styles minimized - external CSS used */  
+ .hero-inner.row {min-height: 400px;}
+body{font-family:'Poppins',sans-serif;overflow-x:hidden;background:#fff;}
+
+/* ─── NAVBAR ─── */
+.topnav{background:#fff;border-bottom:2.5px solid #1b5eab;padding:7px 0;position:sticky;top:0;z-index:999;box-shadow:0 2px 12px rgba(0,0,0,.08);}
+.brand-single{font-size:1.18rem;font-weight:900;color:#1b5eab;letter-spacing:.4px;}
+.brand-single span{font-weight:400;color:#09101d;}
+.nav-link{color:#1a3263!important;font-weight:500;font-size:.875rem;padding:5px 11px!important;}
+.nav-link.active{border-bottom:2.5px solid #1a3263;padding-bottom:3px!important;}
+.btn-cnav{background:linear-gradient(135deg,#1460b8,#1e82e0);color:#fff!important;font-weight:600;font-size:.875rem;border-radius:7px;padding:8px 22px!important;box-shadow:0 2px 10px rgba(20,96,184,.3);}
+
+/* ─── HOVER DROPDOWN ─── */
+.topnav .nav-item.dropdown:hover>.dropdown-menu{display:block;margin-top:0;}
+.topnav .dropdown-menu{
+  border:none;
+  border-radius:10px;
+  box-shadow:0 8px 28px rgba(0,0,0,.13);
+  padding:8px 0;
+  min-width:210px;
+  animation:dropFadeIn .18s ease;
+}
+@keyframes dropFadeIn{
+  from{opacity:0;transform:translateY(-6px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.topnav .dropdown-item{
+  font-size:.855rem;
+  font-weight:500;
+  color:#1a3263;
+  padding:9px 18px;
+  transition:background .15s,color .15s;
+}
+.topnav .dropdown-item:hover{
+  background:linear-gradient(90deg,#eaf1fb,#f4f8ff);
+  color:#1460b8;
+  padding-left:22px;
+}
+.topnav .dropdown-toggle::after{
+  margin-left:5px;
+  vertical-align:middle;
+}
+
+/* ─── SCROLL OFFSET FOR STICKY NAV ─── */
+#about, #companies, #contact {
+  scroll-margin-top: 70px;
+}
+/* ─── HERO ─── */
+.hero-section{background:linear-gradient(108deg,#0b2252 0%,#1452a0 40%,#1e72c8 70%,#2a8fdc 100%);position:relative;overflow:hidden;}
+
+.hero-glow{position:absolute;top:-80px;right:80px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,255,255,.11) 0%,transparent 65%);pointer-events:none;z-index:1;}
+.hero-inner{position:relative;z-index:2;display:flex;align-items:stretch;min-height:380px;}
+.hero-text-col{flex:0 0 50%;max-width:50%;padding:58px 30px 58px 0;display:flex;align-items:center;}
+.hero-text-col .pad{padding-left:max(15px,calc((100vw - 1140px)/2 + 12px));}
+.hero-text-col h1{font-size:1.9rem;font-weight:800;color:#fff;line-height:1.22;margin-bottom:12px;}
+.hero-text-col .tagline{font-size:.88rem;font-weight:600;color:rgba(255,255,255,.96);line-height:1.55;margin-bottom:9px;}
+.hero-text-col .body-txt{font-size:.77rem;color:rgba(255,255,255,.78);line-height:1.78;margin-bottom:28px;max-width:380px;}
+.btn-explore{background:linear-gradient(135deg,#d44e00,#ef6820);color:#fff;font-weight:700;font-size:.83rem;border:none;border-radius:6px;padding:11px 24px;text-decoration:none;display:inline-block;box-shadow:0 4px 14px rgba(212,78,0,.42);}
+.btn-explore:hover{background:linear-gradient(135deg,#b34000,#d44e00);color:#fff;}
+.btn-contact-hero{background:transparent;border:2px solid rgba(255,255,255,.70);color:#fff;font-weight:600;font-size:.83rem;border-radius:6px;padding:10px 22px;text-decoration:none;display:inline-block;}
+.btn-contact-hero:hover{background:rgba(255,255,255,.12);color:#fff;}
+.hero-img-col{flex:0 0 50%;max-width:50%;position:relative;overflow:hidden;}
+.hero-img-col img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block;}
+.hero-img-col::before{content:'';position:absolute;top:0;left:0;width:120px;height:100%;background:linear-gradient(to right,#1452a0 0%,transparent 100%);z-index:2;}
+
+/* ─── ABOUT ─── */
+.about-sec{background:#fff;padding:50px 0 42px;}
+.sec-ttl{font-size:1.45rem;font-weight:700;color:#1c2f5e;text-align:center;margin-bottom:7px;}
+.sec-ttl span{font-weight:900;}
+.sec-bar{width:52px;height:3px;background:#1460b8;border-radius:3px;margin:0 auto 16px;}
+.sec-sub{text-align:center;font-size:.84rem;color:#555;line-height:1.85;max-width:630px;margin:0 auto;}
+.divider-line{border:none;border-top:1px solid #dde4f0;margin:0 44px;}
+
+/* ═══════════════════════════════════════════════
+   OUR COMPANIES — EXACT FIGMA CARD DESIGN
+═══════════════════════════════════════════════ */
+.companies-sec{background:#fff;padding:44px 0 60px;}
+
+/* card wrapper */
+.co-card{
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 4px 20px rgba(0,0,0,.11);
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  background:#fff;
+  transition:transform .22s, box-shadow .22s;
+}
+.co-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 32px rgba(0,0,0,.16);
+}
+
+/* ── HEADER ── */
+.co-hd{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 15px;
+  min-height:74px;
+  position:relative;
+  overflow:hidden;
+}
+/* exact header colours from Figma */
+.hd-1{background:linear-gradient(135deg,#0d2c60 0%,#1a4fa0 100%);}
+.hd-2{background:linear-gradient(135deg,#c04800 0%,#e85e0a 100%);}
+.hd-3{background:linear-gradient(135deg,#0f46a8 0%,#1c70c8 100%);}
+.hd-4{background:linear-gradient(135deg,#9c0f0f 0%,#c42828 100%);}
+
+/* subtle circle glow top-right of header */
+.co-hd::after{
+  content:'';
+  position:absolute;
+  top:-30px;right:-30px;
+  width:100px;height:100px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.10);
+  pointer-events:none;
+}
+
+/* icon inside header */
+.co-hd-icon{
+  width:46px;height:46px;
+  flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.co-hd-icon svg{width:46px;height:46px;}
+
+/* header text */
+.co-hd-text{
+  color:#fff;
+  line-height:1.28;
+}
+.co-hd-text .line1{font-size:.88rem;font-weight:400;display:block;}
+.co-hd-text .line2{font-size:.98rem;font-weight:800;display:block;}
+
+/* ── BODY ── */
+.co-body{
+  flex:1;
+  background:#fff;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  min-height:180px;
+}
+
+/* description text */
+.co-desc{
+  font-size:.82rem;
+  font-weight:500;
+  color:#3a3a3a;
+  line-height:1.6;
+  padding:14px 15px 0 15px;
+  position:relative;
+  z-index:2;
+  flex:1;
+}
+
+/* ── WAVE BOTTOM AREA — fills entire bottom half of card ── */
+.co-wave-bottom{
+  position:relative;
+  height:140px;
+  overflow:hidden;
+  flex-shrink:0;
+  margin-top:-30px; /* overlap slightly into text area for full-half look */
+}
+
+/* SVG fills the whole wave-bottom area */
+.co-wave-bottom svg{
+  position:absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  display:block;
+}
+
+/* ── LEARN MORE BUTTON — sits at bottom of wave ── */
+.co-btn-row{
+  position:absolute;
+  bottom:14px; left:14px; right:14px;
+  z-index:3;
+}
+.btn-learn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  padding:10px 16px;
+  font-size:.83rem;
+  font-weight:700;
+  letter-spacing:.15px;
+  border:none;
+  border-radius:7px;
+  cursor:pointer;
+  text-decoration:none;
+  transition:filter .2s, transform .15s;
+}
+.btn-learn:hover{filter:brightness(1.1);transform:translateY(-1px);}
+.btn-learn .arr{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:20px;height:20px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.25);
+  font-size:.72rem;
+}
+/* navy button (cards 1 & 3) */
+.btn-navy{background:linear-gradient(135deg,#0d2c60,#1a4fa0);color:#fff;}
+/* orange button (cards 2 & 4) */
+.btn-orange{background:linear-gradient(135deg,#c04800,#e85e0a);color:#fff;}
+
+/* ─── CLIENTS / PARTNERS MARQUEE ─── */
+.clients-sec{background:#fff;padding:44px 0 50px;overflow:hidden;}
+.clients-sec .sec-ttl{margin-bottom:7px;}
+.marquee-track{display:flex;gap:0;width:max-content;animation:marqueeScroll 28s linear infinite;}
+.marquee-track:hover{animation-play-state:paused;}
+.marquee-wrap{overflow:hidden;width:100%;mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 8%,#000 92%,transparent 100%);}
+.client-logo-card{
+  flex-shrink:0;
+  width:150px;
+  height:80px;
+  margin:0 16px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  transition:box-shadow .2s, transform .2s;
+}
+.client-logo-card:hover{box-shadow:0 6px 22px rgba(20,96,184,.18);transform:translateY(-3px);}
+.client-logo-card img{max-width:120px;max-height:56px;object-fit:contain;filter:grayscale(30%);transition:filter .2s;}
+.client-logo-card:hover img{filter:grayscale(0%);}
+.client-logo-card svg{max-width:140px;max-height:70px;transition:opacity .2s;}
+.client-logo-card:hover svg{opacity:0.85;}
+@keyframes marqueeScroll{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+
+/* ─── WHY CHOOSE ─── */
+.why-sec{background:linear-gradient(180deg,#e6f2fb 0%,#d8eaf7 100%);padding:50px 0 0;}
+.chk-item{display:flex;align-items:center;gap:13px;margin-bottom:22px;}
+.chk-dot{width:37px;height:37px;flex-shrink:0;border-radius:50%;background:linear-gradient(135deg,#1048a4,#1e70c6);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.95rem;box-shadow:0 3px 10px rgba(16,72,164,.28);}
+.chk-txt{font-size:.93rem;font-weight:600;color:#1c2f5e;}
+.form-card{background:#fff;border-radius:12px;box-shadow:0 6px 30px rgba(0,0,0,.10);padding:26px 24px 28px;}
+.f-input{display:block;width:100%;border:1px solid #cdd6e8;border-radius:7px;font-family:'Poppins',sans-serif;font-size:.84rem;color:#333;padding:10px 13px;margin-bottom:12px;outline:none;transition:border .18s;background:#fff;}
+.f-input:focus{border-color:#1460b8;}
+.f-input::placeholder{color:#b5bfcc;}
+.btn-send{background:linear-gradient(135deg,#c74c00,#ea6010);color:#fff;font-weight:700;font-size:.9rem;border:none;border-radius:8px;padding:12px;width:100%;box-shadow:0 4px 14px rgba(199,76,0,.36);cursor:pointer;}
+
+/* ─── GET IN TOUCH ─── */
+.git-sec{background:linear-gradient(160deg,#0a1d4a 0%,#103c96 50%,#1a6ac4 100%);padding:40px 0 50px;position:relative;overflow:hidden;}
+.git-content{position:relative;z-index:2;}
+.git-title{font-size:1.15rem;font-weight:700;color:#fff;border-bottom:1.5px solid rgba(255,255,255,.22);padding-bottom:10px;margin-bottom:18px;}
+.git-item{display:flex;align-items:center;gap:12px;color:rgba(255,255,255,.88);font-size:.86rem;margin-bottom:13px;}
+.git-item i{color:#ffd54f;font-size:1rem;flex-shrink:0;}
+
+/* ─── FOOTER ─── */
+.footer-bar{background:#081538;padding:25px 0 15px;}
+.f-lnk a{color:rgba(255,255,255,.70);text-decoration:none;font-size:.79rem;padding:0 10px;border-right:1px solid rgba(255,255,255,.18);}
+.f-lnk a:last-child{border-right:none;}
+.f-lnk a:hover{color:#fff;}
+.soc{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.11);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:.77rem;text-decoration:none;margin:0 2px;transition:all .2s;}
+.soc:hover{background:#ea6010;}
+.f-copy{color:rgba(255,255,255,.38);font-size:.74rem;text-align:center;margin-top:7px;}
+.footer-nav-link{color:rgba(255,255,255,.85)!important;font-weight:500;font-size:.79rem;padding:4px 12px!important;transition:color .2s;}
+.footer-nav-link:hover{color:#fff!important;}
+.footer-nav-divider{border:none;border-top:1px solid rgba(255,255,255,.12);margin:18px 0;}
+.sec-ttl-link{display:inline-block;text-decoration:none;color:inherit;transition:all .2s;cursor:pointer;}
+.sec-ttl-link:hover .sec-ttl{text-decoration:underline;}
+@media(max-width:767px){.footer-nav .navbar-nav{flex-direction:column;align-items:center;gap:.5rem;}}
+
+@media(max-width:767px){
+  .hero-inner{flex-direction:column;}
+  .hero-text-col,.hero-img-col{flex:0 0 100%;max-width:100%;}
+  .hero-img-col{height:220px;}
+  .hero-text-col{padding:36px 15px 60px;}
+  .hero-text-col h1{font-size:1.5rem;}
+}
+</style>
+</head>
+<body>
+<!-- ── NAVBAR ── -->
+<nav class="topnav navbar navbar-expand-lg">
+  <div class="container">
+<a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="chandana-logo.jpeg" alt="Chandana Logo" style="height: 40px; width: auto; border-radius: 50%; margin-right: 12px;">
+      <span class="brand-single">CHANDANA <span>GROUPS</span></span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMain">
+<ul class="navbar-nav align-items-center gap-1" id="navbarLinks">
+        <li><a class="nav-link active" href="#home" data-target="#home">Home</a></li>
+        <li><a class="nav-link" href="about-us.html">About Us</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#companies" id="navbarDropdown" role="button" aria-expanded="false" data-target="#companies">
+            Our Companies
+          </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <li><a class="dropdown-item" href="../../it%20solutions.html">Chandana IT Solutions</a></li>
+    <li><a class="dropdown-item" href="../JOBNEST HUB SOLUTION/jobnest hub.html">JobNest Hub Solution</a></li>
+    <li><a class="dropdown-item" href="../chandhana tech/chandana tech career.html">Chandana Tech Careers</a></li>
+    <li><a class="dropdown-item" href="../../main_landing_page (1).html">Sri Sharada Nikethana</a></li>
+  </ul>
+</li>
+
+        <li><a class="nav-link" href="#careers" data-target="#careers">Careers</a></li>
+        <li class="ms-2"><a class="nav-link btn-cnav" href="contact.html">Contact Us</a></li>
+</xai:function_call}
+
+<xai:function_call name="execute_command">
+      </ul>
+    </div>
+  </div>
+</nav>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero-section" id="home">
+  <div class="hero-glow"></div>
+  <div class="container-fluid px-0">
+    <div class="hero-inner">
+      <div class="hero-text-col">
+        <div class="pad">
+          <h1>Welcome to Chandana Groups</h1>
+          <p class="tagline">Empowering Careers, Technology, and Opportunities Through Innovation and Excellence.</p>
+          <p class="body-txt">Chandana Groups is a service organization focused on technology services, recruitment, career development, and educational initiatives to help individuals and businesses succeed.</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="#companies" class="btn-explore">Explore Our Companies</a>
+            <a href="#contact" class="btn-contact-hero">Contact Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-img-col">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=85" alt="Team"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section class="about-sec" id="about">
+  <div class="container text-center">
+    <h2 class="sec-ttl">About <span>Chandana Groups</span></h2>
+    <div class="sec-bar mx-auto"></div>
+    <p class="sec-sub">Chandana Groups is a multi-service organization focused on technology services, recruitment, career development, and educational initiatives to help individuals and businesses succeed.</p>
+  </div>
+</section>
+<hr class="divider-line"/>
+
+<!-- ══════════════════════════════════════════════
+     OUR COMPANIES — EXACT FIGMA REPLICA
+══════════════════════════════════════════════ -->
+<section class="companies-sec" id="companies">
+  <div class="container text-center">
+    <h2 class="sec-ttl">Our <span>Companies</span></h2>
+    <div class="sec-bar mx-auto"></div>
+
+    <div class="row g-4 mt-2">
+
+      <!-- ╔══════════════════════════╗
+           ║  CARD 1 — NAVY BLUE     ║
+           ║  Chandana IT Solutions  ║
+           ╚══════════════════════════╝ -->
+      <div class="col-lg-3 col-md-6">
+        <div class="co-card">
+          <!-- Header -->
+          <div class="co-hd hd-1">
+<div class="co-hd-icon">
+              <img src="chandana it solutions logo.jpeg" alt="IT Solutions Logo" style="height: 35px; width: auto; border-radius: 8px;">
+            </div>
+            <div class="co-hd-text">
+              <span class="line1">Chandana</span>
+              <span class="line2">IT Solutions</span>
+            </div>
+          </div>
+          <!-- Body -->
+          <div class="co-body">
+            <p class="co-desc">IT Services &amp; Software Development</p>
+            <div class="co-wave-bottom">
+              <svg viewBox="0 0 300 140" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Line 1: WAVE — dips down in middle then rises to right -->
+                <path d="M0,140 L0,55 C50,45 80,85 130,70 C180,55 240,20 300,10 L300,140 Z"
+                      fill="rgba(13,44,96,0.07)"/>
+                <!-- Line 2: inside line1, same wave slightly lower -->
+                <path d="M0,140 L0,75 C50,65 80,100 130,88 C180,75 240,42 300,30 L300,140 Z"
+                      fill="rgba(13,44,96,0.12)"/>
+                <!-- Line 3: dark small curve bottom-right corner only -->
+                <path d="M200,140 C235,136 272,120 300,102 L300,140 Z"
+                      fill="rgba(13,44,96,0.30)"/>
+              </svg>
+              <div class="co-btn-row">
+                <a href="../../it%20solutions.html" class="btn-learn btn-navy">Learn More <span class="arr"><i class="bi bi-chevron-right"></i></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ╔══════════════════════════╗
+           ║  CARD 2 — ORANGE        ║
+           ║  JobNest Hub Solution   ║
+           ╚══════════════════════════╝ -->
+      <div class="col-lg-3 col-md-6">
+        <div class="co-card">
+          <div class="co-hd hd-2">
+<div class="co-hd-icon">
+              <img src="logo.jpeg" alt="JobNest Logo" style="height: 35px; width: auto; border-radius: 8px;">
+            </div>
+            <div class="co-hd-text">
+              <span class="line1">JobNest</span>
+              <span class="line2">Hub Solution</span>
+            </div>
+          </div>
+          <div class="co-body">
+            <p class="co-desc">Recruitment &amp; Staffing Services</p>
+            <div class="co-wave-bottom">
+              <svg viewBox="0 0 300 140" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,140 L0,55 C50,45 80,85 130,70 C180,55 240,20 300,10 L300,140 Z"
+                      fill="rgba(192,72,0,0.07)"/>
+                <path d="M0,140 L0,75 C50,65 80,100 130,88 C180,75 240,42 300,30 L300,140 Z"
+                      fill="rgba(192,72,0,0.13)"/>
+                <path d="M200,140 C235,136 272,120 300,102 L300,140 Z"
+                      fill="rgba(192,72,0,0.32)"/>
+              </svg>
+                <div class="co-btn-row">
+                <a href="jobnest hub.html" class="btn-learn btn-orange">Learn More <span class="arr"><i class="bi bi-chevron-right"></i></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ╔══════════════════════════╗
+           ║  CARD 3 — BLUE           ║
+           ║  Chandana Tech Careers   ║
+           ╚══════════════════════════╝ -->
+      <div class="col-lg-3 col-md-6">
+        <div class="co-card">
+          <div class="co-hd hd-3">
+<div class="co-hd-icon">
+              <img src="chandana tech carrer.jpeg" alt="Tech Careers Logo" style="height: 35px; width: auto; border-radius: 8px;">
+            </div>
+            <div class="co-hd-text">
+              <span class="line1">Chandana</span>
+              <span class="line2">Tech Careers</span>
+            </div>
+          </div>
+          <div class="co-body">
+            <p class="co-desc">Career Opportunities in Tech Education &amp; Online Exams</p>
+            <div class="co-wave-bottom">
+<svg viewBox="0 0 300 140" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,140 L0,55 C50,45 80,85 130,70 C180,55 240,20 300,10 L300,140 Z"
+                      fill="rgba(15,70,168,0.07)"/>
+                <path d="M0,140 L0,75 C50,65 80,100 130,88 C180,75 240,42 300,30 L300,140 Z"
+                      fill="rgba(15,70,168,0.12)"/>
+                <path d="M200,140 C235,136 272,120 300,102 L300,140 Z"
+                      fill="rgba(15,70,168,0.30)"/>
+              </svg>
+              <div class="co-btn-row">
+                <a href="../chandhana tech/chandana tech career.html" class="btn-learn btn-navy">Learn More <span class="arr"><i class="bi bi-chevron-right"></i></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- ╔═════════════════════════╗
+            ║  CARD 4 — RED-ORANGE    ║
+            ║  Sri Sharada Nikethana  ║
+            ╚═════════════════════════╝ -->
+      <div class="col-lg-3 col-md-6">
+        <div class="co-card">
+          <div class="co-hd hd-4">
+            <div class="co-hd-icon">
+              <img src="sri sharada logo.jpeg" alt="Sri Sharada Logo" style="height: 35px; width: auto; border-radius: 8px;">
+            </div>
+            <div class="co-hd-text">
+              <span class="line1">Sri Sharada</span>
+              <span class="line2">Nikethana</span>
+            </div>
+          </div>
+          <div class="co-body">
+            <p class="co-desc">Online Exam &amp; Teaching Center</p>
+            <div class="co-wave-bottom">
+              <svg viewBox="0 0 300 140" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,140 L0,55 C50,45 80,85 130,70 C180,55 240,20 300,10 L300,140 Z"
+                      fill="rgba(156,15,15,0.07)"/>
+                <path d="M0,140 L0,75 C50,65 80,100 130,88 C180,75 240,42 300,30 L300,140 Z"
+                      fill="rgba(156,15,15,0.13)"/>
+                <path d="M200,140 C235,136 272,120 300,102 L300,140 Z"
+                      fill="rgba(156,15,15,0.32)"/>
+              </svg>
+              <div class="co-btn-row">
+                <a href="../../main_landing_page (1).html" class="btn-learn btn-orange">Learn More <span class="arr"><i class="bi bi-chevron-right"></i></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /row -->
+  </div>
+</section>
+
+<!-- ── CLIENT / PARTNER LOGOS ── -->
+<hr class="divider-line"/>
+<section class="clients-sec" id="clients">
+  <div class="container">
+    <h2 class="sec-ttl">Our <span>Clients & Partners</span></h2>
+    <div class="sec-bar"></div>
+    <p class="sec-sub" style="margin-bottom:28px;">Trusted by leading organizations across education, technology, and finance.</p>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee-track" id="marqueeTrack">
+
+      <!-- SET 1 -->
+      <div class="client-logo-card">
+        <!-- Aptech: dark box with orange text -->
+        <svg width="120" height="48" viewBox="0 0 120 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="120" height="48" rx="4" fill="#2d2d2d"/>
+          <text x="60" y="28" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#d4884a" text-anchor="middle">Aptech</text>
+          <text x="60" y="41" font-family="Arial,sans-serif" font-size="7" fill="#aaa" text-anchor="middle">Unleash your potential</text>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- Sify: olive-green box with dark text -->
+        <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <rect width="80" height="80" rx="4" fill="#8faa1b"/>
+          <text x="40" y="50" font-family="Georgia,serif" font-size="26" font-weight="bold" fill="#2d3a4a" text-anchor="middle">sify</text>
+          <circle cx="68" cy="20" r="4" fill="#2d3a4a"/>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- NSE: red diamond icon + dark NSE text -->
+        <svg width="130" height="60" viewBox="0 0 130 60" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="22,10 34,22 22,34 10,22" fill="#8b2020"/>
+          <rect x="15" y="19" width="14" height="6" rx="1" fill="white"/>
+          <text x="44" y="28" font-family="Arial,sans-serif" font-size="26" font-weight="900" fill="#1a2540" text-anchor="start">NSE</text>
+          <text x="10" y="48" font-family="Arial,sans-serif" font-size="7.5" fill="#555" text-anchor="start">National Stock Exchange Of India</text>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- CDAC: blue Devanagari + CDAC text -->
+        <svg width="110" height="64" viewBox="0 0 110 64" xmlns="http://www.w3.org/2000/svg">
+          <text x="55" y="26" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#1a8fc1" text-anchor="middle">सी-डैक</text>
+          <text x="55" y="52" font-family="Arial Black,sans-serif" font-size="22" font-weight="900" fill="#1a8fc1" text-anchor="middle" letter-spacing="1">CDAC</text>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- MeritTrac: merit(red) trac(dark) -->
+        <svg width="140" height="48" viewBox="0 0 140 48" xmlns="http://www.w3.org/2000/svg">
+          <text x="4" y="36" font-family="Arial Rounded MT Bold,Arial,sans-serif" font-size="28" font-weight="bold" fill="#c0392b">merit</text>
+          <text x="78" y="36" font-family="Arial Rounded MT Bold,Arial,sans-serif" font-size="28" font-weight="bold" fill="#2d3a4a">trac</text>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- L&T EduTech: gradient box -->
+        <svg width="130" height="60" viewBox="0 0 130 60" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#1a9fd4"/>
+              <stop offset="100%" style="stop-color:#6aaa44"/>
+            </linearGradient>
+          </defs>
+          <rect width="130" height="60" rx="4" fill="url(#ltGrad)"/>
+          <text x="65" y="26" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="white" text-anchor="middle">L&amp;T</text>
+          <text x="65" y="50" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">EduTech</text>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- Vensysco: bold dark text with globe icon -->
+        <svg width="140" height="48" viewBox="0 0 140 48" xmlns="http://www.w3.org/2000/svg">
+          <text x="4" y="34" font-family="Arial Black,sans-serif" font-size="20" font-weight="900" fill="#222" letter-spacing="-0.5">VENSYSCO</text>
+          <circle cx="128" cy="22" r="10" fill="none" stroke="#222" stroke-width="1.5"/>
+          <ellipse cx="128" cy="22" rx="5" ry="10" fill="none" stroke="#222" stroke-width="1.5"/>
+          <line x1="118" y1="22" x2="138" y2="22" stroke="#222" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- SAI Group: circle S icon + SAI GROUP text -->
+        <svg width="150" height="60" viewBox="0 0 150 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="30" r="26" fill="none" stroke="#888" stroke-width="2"/>
+          <path d="M20,20 Q14,20 14,26 Q14,32 28,30 Q42,28 42,36 Q42,42 34,42" fill="none" stroke="#c0392b" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M20,20 Q14,20 14,26 Q14,32 28,30 Q42,28 42,36 Q42,42 34,42" fill="none" stroke="#2d4fa0" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="12 100" stroke-dashoffset="-20"/>
+          <text x="62" y="26" font-family="Arial,sans-serif" font-size="16" font-weight="900" fill="#333" text-anchor="start">SAI GROUP</text>
+          <text x="62" y="42" font-family="Arial,sans-serif" font-size="9" fill="#666" letter-spacing="2" text-anchor="start">OF COMPANIES</text>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- Ginger: cursive text + colored dots -->
+        <svg width="130" height="52" viewBox="0 0 130 52" xmlns="http://www.w3.org/2000/svg">
+          <text x="10" y="36" font-family="Georgia,Times New Roman,serif" font-size="26" font-style="italic" fill="#333">Ginger</text>
+          <circle cx="94" cy="18" r="9" fill="#7ab648"/>
+          <circle cx="106" cy="26" r="8" fill="#e8a020"/>
+          <circle cx="96" cy="34" r="8" fill="#e05a20"/>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- Orlando Academy: blue flame globe + text -->
+        <svg width="150" height="60" viewBox="0 0 150 60" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="orGlobe" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" style="stop-color:#c8d8f0"/>
+              <stop offset="100%" style="stop-color:#7090c0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="28" cy="30" r="24" fill="url(#orGlobe)" stroke="#6090c0" stroke-width="1"/>
+          <path d="M28,8 Q22,20 28,28 Q34,20 28,8Z" fill="#1a4fa0"/>
+          <path d="M22,12 Q16,24 22,32 Q26,26 22,12Z" fill="#3060c0" opacity="0.6"/>
+          <text x="58" y="26" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#1a2540">Orlando</text>
+          <text x="58" y="44" font-family="Arial,sans-serif" font-size="14" fill="#c07830">academy</text>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- Intent Infotech: navy blue cursive Intent + infotech pvt ltd -->
+        <svg width="150" height="62" viewBox="0 0 150 62" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20,16 Q75,8 130,16" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-linecap="round"/>
+          <text x="10" y="44" font-family="Georgia,serif" font-size="26" font-style="italic" fill="#1a2d6e">Intent</text>
+          <text x="10" y="58" font-family="Arial,sans-serif" font-size="10" fill="#1a2d6e" letter-spacing="0.5">infotech pvt. ltd.</text>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- Awign: blue triangle + awign + A Mynavi company -->
+        <svg width="150" height="64" viewBox="0 0 150 64" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="16,34 24,18 32,34" fill="none" stroke="#4a7fd4" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="20" y1="28" x2="28" y2="28" stroke="#4a7fd4" stroke-width="1.5"/>
+          <text x="40" y="36" font-family="Arial,sans-serif" font-size="26" font-weight="300" fill="#4a7fd4" letter-spacing="1">awign</text>
+          <text x="20" y="52" font-family="Arial,sans-serif" font-size="9.5" fill="#4a7fd4" text-anchor="start">A <tspan font-weight="bold">Mynavi</tspan> company</text>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- Eduquity: mauve box with e + text below -->
+        <svg width="110" height="80" viewBox="0 0 110 80" xmlns="http://www.w3.org/2000/svg">
+          <rect x="15" y="2" width="80" height="44" rx="3" fill="#a0616a"/>
+          <text x="55" y="38" font-family="Georgia,serif" font-size="46" font-style="italic" font-weight="bold" fill="white" text-anchor="middle">e</text>
+          <text x="55" y="62" font-family="Arial,sans-serif" font-size="16" font-weight="500" fill="#3a3a3a" text-anchor="middle">eduqu</text>
+          <circle cx="77" cy="52" r="3" fill="#a0616a"/>
+          <line x1="77" y1="55" x2="77" y2="66" stroke="#a0616a" stroke-width="1.5"/>
+          <text x="83" y="62" font-family="Arial,sans-serif" font-size="16" font-weight="500" fill="#3a3a3a">ty</text>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- Innovatiview: dark text, orange O, underline, BE DISTINCT -->
+        <svg width="160" height="52" viewBox="0 0 160 52" xmlns="http://www.w3.org/2000/svg">
+          <text x="4" y="28" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#2d3a4a">Inn</text>
+          <circle cx="52" cy="20" r="8" fill="none" stroke="#e07820" stroke-width="2.5"/>
+          <text x="44" y="28" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e07820">o</text>
+          <text x="56" y="28" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#2d3a4a">vatiview</text>
+          <line x1="4" y1="34" x2="148" y2="34" stroke="#2d3a4a" stroke-width="1.5"/>
+          <text x="80" y="44" font-family="Arial,sans-serif" font-size="7.5" fill="#888" text-anchor="middle" letter-spacing="1.5">BE DISTINCT</text>
+        </svg>
+      </div>
+      <div class="client-logo-card">
+        <!-- Satvat: elegant serif + tagline -->
+        <svg width="140" height="56" viewBox="0 0 140 56" xmlns="http://www.w3.org/2000/svg">
+          <text x="70" y="30" font-family="Georgia,Times New Roman,serif" font-size="26" font-weight="bold" fill="#4a5a6a" text-anchor="middle">Satvat</text>
+          <text x="70" y="44" font-family="Georgia,serif" font-size="9" font-style="italic" fill="#888" text-anchor="middle">Your delight. Our pride.</text>
+          <circle cx="82" cy="14" r="4" fill="#888" opacity="0.5"/>
+        </svg>
+      </div>
+
+      <!-- SET 2 (duplicate for seamless loop) -->
+      <div class="client-logo-card"><svg width="120" height="48" viewBox="0 0 120 48" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="48" rx="4" fill="#2d2d2d"/><text x="60" y="28" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#d4884a" text-anchor="middle">Aptech</text><text x="60" y="41" font-family="Arial,sans-serif" font-size="7" fill="#aaa" text-anchor="middle">Unleash your potential</text></svg></div>
+      <div class="client-logo-card"><svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="80" rx="4" fill="#8faa1b"/><text x="40" y="50" font-family="Georgia,serif" font-size="26" font-weight="bold" fill="#2d3a4a" text-anchor="middle">sify</text><circle cx="68" cy="20" r="4" fill="#2d3a4a"/></svg></div>
+      <div class="client-logo-card"><svg width="130" height="60" viewBox="0 0 130 60" xmlns="http://www.w3.org/2000/svg"><polygon points="22,10 34,22 22,34 10,22" fill="#8b2020"/><rect x="15" y="19" width="14" height="6" rx="1" fill="white"/><text x="44" y="28" font-family="Arial,sans-serif" font-size="26" font-weight="900" fill="#1a2540" text-anchor="start">NSE</text><text x="10" y="48" font-family="Arial,sans-serif" font-size="7.5" fill="#555" text-anchor="start">National Stock Exchange Of India</text></svg></div>
+      <div class="client-logo-card"><svg width="110" height="64" viewBox="0 0 110 64" xmlns="http://www.w3.org/2000/svg"><text x="55" y="26" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#1a8fc1" text-anchor="middle">सी-डैक</text><text x="55" y="52" font-family="Arial Black,sans-serif" font-size="22" font-weight="900" fill="#1a8fc1" text-anchor="middle" letter-spacing="1">CDAC</text></svg></div>
+      <div class="client-logo-card"><svg width="140" height="48" viewBox="0 0 140 48" xmlns="http://www.w3.org/2000/svg"><text x="4" y="36" font-family="Arial Rounded MT Bold,Arial,sans-serif" font-size="28" font-weight="bold" fill="#c0392b">merit</text><text x="78" y="36" font-family="Arial Rounded MT Bold,Arial,sans-serif" font-size="28" font-weight="bold" fill="#2d3a4a">trac</text></svg></div>
+      <div class="client-logo-card"><svg width="130" height="60" viewBox="0 0 130 60" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="ltGrad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#1a9fd4"/><stop offset="100%" style="stop-color:#6aaa44"/></linearGradient></defs><rect width="130" height="60" rx="4" fill="url(#ltGrad2)"/><text x="65" y="26" font-family="Arial,sans-serif" font-size="18" font-weight="900" fill="white" text-anchor="middle">L&amp;T</text><text x="65" y="50" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="white" text-anchor="middle">EduTech</text></svg></div>
+      <div class="client-logo-card"><svg width="140" height="48" viewBox="0 0 140 48" xmlns="http://www.w3.org/2000/svg"><text x="4" y="34" font-family="Arial Black,sans-serif" font-size="20" font-weight="900" fill="#222" letter-spacing="-0.5">VENSYSCO</text><circle cx="128" cy="22" r="10" fill="none" stroke="#222" stroke-width="1.5"/><ellipse cx="128" cy="22" rx="5" ry="10" fill="none" stroke="#222" stroke-width="1.5"/><line x1="118" y1="22" x2="138" y2="22" stroke="#222" stroke-width="1.5"/></svg></div>
+      <div class="client-logo-card"><svg width="150" height="60" viewBox="0 0 150 60" xmlns="http://www.w3.org/2000/svg"><circle cx="28" cy="30" r="26" fill="none" stroke="#888" stroke-width="2"/><path d="M20,20 Q14,20 14,26 Q14,32 28,30 Q42,28 42,36 Q42,42 34,42" fill="none" stroke="#c0392b" stroke-width="3.5" stroke-linecap="round"/><path d="M20,20 Q14,20 14,26 Q14,32 28,30 Q42,28 42,36 Q42,42 34,42" fill="none" stroke="#2d4fa0" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="12 100" stroke-dashoffset="-20"/><text x="62" y="26" font-family="Arial,sans-serif" font-size="16" font-weight="900" fill="#333" text-anchor="start">SAI GROUP</text><text x="62" y="42" font-family="Arial,sans-serif" font-size="9" fill="#666" letter-spacing="2" text-anchor="start">OF COMPANIES</text></svg></div>
+      <div class="client-logo-card"><svg width="130" height="52" viewBox="0 0 130 52" xmlns="http://www.w3.org/2000/svg"><text x="10" y="36" font-family="Georgia,Times New Roman,serif" font-size="26" font-style="italic" fill="#333">Ginger</text><circle cx="94" cy="18" r="9" fill="#7ab648"/><circle cx="106" cy="26" r="8" fill="#e8a020"/><circle cx="96" cy="34" r="8" fill="#e05a20"/></svg></div>
+      <div class="client-logo-card"><svg width="140" height="56" viewBox="0 0 140 56" xmlns="http://www.w3.org/2000/svg"><text x="70" y="30" font-family="Georgia,Times New Roman,serif" font-size="26" font-weight="bold" fill="#4a5a6a" text-anchor="middle">Satvat</text><text x="70" y="44" font-family="Georgia,serif" font-size="9" font-style="italic" fill="#888" text-anchor="middle">Your delight. Our pride.</text><circle cx="82" cy="14" r="4" fill="#888" opacity="0.5"/></svg></div>
+      <div class="client-logo-card"><svg width="110" height="80" viewBox="0 0 110 80" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="2" width="80" height="44" rx="3" fill="#a0616a"/><text x="55" y="38" font-family="Georgia,serif" font-size="46" font-style="italic" font-weight="bold" fill="white" text-anchor="middle">e</text><text x="55" y="62" font-family="Arial,sans-serif" font-size="16" font-weight="500" fill="#3a3a3a" text-anchor="middle">eduqu</text><circle cx="77" cy="52" r="3" fill="#a0616a"/><line x1="77" y1="55" x2="77" y2="66" stroke="#a0616a" stroke-width="1.5"/><text x="83" y="62" font-family="Arial,sans-serif" font-size="16" font-weight="500" fill="#3a3a3a">ty</text></svg></div>
+      <div class="client-logo-card"><svg width="160" height="52" viewBox="0 0 160 52" xmlns="http://www.w3.org/2000/svg"><text x="4" y="28" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#2d3a4a">Inn</text><circle cx="52" cy="20" r="8" fill="none" stroke="#e07820" stroke-width="2.5"/><text x="44" y="28" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#e07820">o</text><text x="56" y="28" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#2d3a4a">vatiview</text><line x1="4" y1="34" x2="148" y2="34" stroke="#2d3a4a" stroke-width="1.5"/><text x="80" y="44" font-family="Arial,sans-serif" font-size="7.5" fill="#888" text-anchor="middle" letter-spacing="1.5">BE DISTINCT</text></svg></div>
+      <div class="client-logo-card"><svg width="150" height="64" viewBox="0 0 150 64" xmlns="http://www.w3.org/2000/svg"><polygon points="16,34 24,18 32,34" fill="none" stroke="#4a7fd4" stroke-width="2.5" stroke-linejoin="round"/><line x1="20" y1="28" x2="28" y2="28" stroke="#4a7fd4" stroke-width="1.5"/><text x="40" y="36" font-family="Arial,sans-serif" font-size="26" font-weight="300" fill="#4a7fd4" letter-spacing="1">awign</text><text x="20" y="52" font-family="Arial,sans-serif" font-size="9.5" fill="#4a7fd4" text-anchor="start">A <tspan font-weight="bold">Mynavi</tspan> company</text></svg></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE + FORM -->
+<section class="why-sec" id="contact">
+  <div class="container">
+    <a href="#footer-nav" class="sec-ttl-link"><h2 class="sec-ttl">Why Choose <span>Us?</span></h2></a>
+    <div class="sec-bar"></div>
+    <div class="row g-5 mt-1 pb-4">
+      <div class="col-md-5 pt-2">
+        <div class="chk-item"><div class="chk-dot"><i class="bi bi-check-lg"></i></div><span class="chk-txt">Industry Expertise</span></div>
+        <div class="chk-item"><div class="chk-dot"><i class="bi bi-check-lg"></i></div><span class="chk-txt">Strong Student &amp; Employer Network</span></div>
+        <div class="chk-item"><div class="chk-dot"><i class="bi bi-check-lg"></i></div><span class="chk-txt">Professional Training Programs</span></div>
+        <div class="chk-item"><div class="chk-dot"><i class="bi bi-check-lg"></i></div><span class="chk-txt">Career Opportunities for Youth</span></div>
+        
+        <div class="git-content" style="background: linear-gradient(160deg,#0a1d4a 0%,#103c96 50%,#1a6ac4 100%); border-radius: 12px; padding: 30px; margin-bottom: 24px;">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="git-title" style="color: #fff;">Get in Touch</div>
+              <div class="git-item" style="color:rgba(255,255,255,.88);"><i class="bi bi-geo-alt-fill" style="color:#ffd54f;"></i>Karnataka, India</div>
+              <div class="git-item" style="color:rgba(255,255,255,.88);"><i class="bi bi-telephone-fill" style="color:#ffd54f;"></i>+91 98765 43210</div>
+              <div class="git-item" style="color:rgba(255,255,255,.88);"><i class="bi bi-envelope-fill" style="color:#ffd54f;"></i>info@chandanagroups.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="form-card">
+
+          <input class="f-input" type="text" placeholder="Your Name"/>
+          <input class="f-input" type="email" placeholder="Your Email"/>
+          <input class="f-input" type="tel" placeholder="Your Phone"/>
+          <textarea class="f-input" rows="4" placeholder="Your Message" style="resize:none;margin-bottom:16px;"></textarea>
+          <button class="btn-send">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-bar">
+  <div class="container">
+    <div class="row pt-2 pb-3">
+
+      <!-- Col 1: Brand -->
+      <div class="col-md-4 mb-4 mb-md-0 pe-md-5">
+        <div class="f-brand">Chandana Groups</div>
+        <p class="f-tagline">Empowering careers through technology services, recruitment, career development, and educational initiatives.</p>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="col-6 col-md-2 mb-4 mb-md-0">
+        <div class="f-col-title">Quick Links</div>
+        <ul class="f-col-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#companies">Our Companies</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Our Companies -->
+      <div class="col-6 col-md-3 mb-4 mb-md-0">
+        <div class="f-col-title">Our Companies</div>
+        <ul class="f-col-list">
+          <li><a href="../../it%20solutions.html">Chandana IT Solutions</a></li>
+          <li><a href="../JOBNEST HUB SOLUTION/jobnest hub.html">JobNest HR Solutions</a></li>
+          <li><a href="../chandhana tech/chandana tech career.html">Chandana Tech Careers</a></li>
+          <li><a href="../../main_landing_page (1).html">Sri Sharada Nikethana</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Newsletter -->
+      <div class="col-md-3 mb-4 mb-md-0">
+        <div class="f-col-title">Newsletter</div>
+        <p class="f-newsletter-sub">Subscribe to get latest updates</p>
+        <div class="f-newsletter-row">
+          <input class="f-newsletter-input" type="email" placeholder="Enter your email"/>
+          <button class="f-newsletter-btn">Subscribe</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="f-bottom-bar">
+      <div class="f-bottom-left">
+        <a href="#">Privacy Policy</a>
+        <span class="f-divider">|</span>
+        <a href="#">Terms &amp; Conditions</a>
+        <span class="f-divider">|</span>
+
+      </div>
+      <div class="f-bottom-right">
+        <a href="#" class="soc"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="soc"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="soc"><i class="bi bi-youtube"></i></a>
+        <a href="#" class="soc"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="soc"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+    <p class="f-copy">© 2026 Chandana Groups. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- CHATBOT WIDGET -->
+<div id="cg-chat-widget">
+  <!-- Chat Button -->
+  <button id="cg-chat-btn" onclick="toggleChat()" title="Chat with us">
+    <span id="cg-chat-icon"><i class="bi bi-chat-dots-fill"></i></span>
+    <span id="cg-chat-close" style="display:none;"><i class="bi bi-x-lg"></i></span>
+    <span id="cg-chat-badge">1</span>
+  </button>
+
+  <!-- Chat Window -->
+  <div id="cg-chat-window">
+    <div id="cg-chat-header">
+      <div class="cg-header-avatar"><i class="bi bi-person-fill"></i></div>
+      <div>
+        <div class="cg-header-name">Chandana Groups</div>
+        <div class="cg-header-status"><span class="cg-dot"></span> Online</div>
+      </div>
+      <button class="cg-header-close" onclick="toggleChat()"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div id="cg-chat-messages">
+      <div class="cg-msg-time">Today</div>
+      <div class="cg-msg bot">
+        <div class="cg-bubble">👋 Hi there! Welcome to <strong>Chandana Groups</strong>. How can we help you today?</div>
+      </div>
+      <div class="cg-msg bot">
+        <div class="cg-bubble">Choose an option below or type your message:</div>
+      </div>
+      <div class="cg-quick-replies">
+        <button onclick="quickReply('Our Services')">Our Services</button>
+        <button onclick="quickReply('Career Opportunities')">Career Opportunities</button>
+        <button onclick="quickReply('Contact Support')">Contact Support</button>
+        <button onclick="quickReply('Our Companies')">Our Companies</button>
+      </div>
+    </div>
+    <div id="cg-chat-input-bar">
+      <input id="cg-chat-input" type="text" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMessage()"/>
+      <button onclick="sendMessage()"><i class="bi bi-send-fill"></i></button>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ── CHATBOT STYLES ── */
+#cg-chat-widget { position: fixed; bottom: 28px; right: 28px; z-index: 9999; font-family: 'Segoe UI', Arial, sans-serif; }
+
+#cg-chat-btn {
+  width: 58px; height: 58px; border-radius: 50%; border: none;
+  background: linear-gradient(135deg, #1460b8, #1a7ae0);
+  color: #fff; font-size: 1.4rem; cursor: pointer;
+  box-shadow: 0 6px 24px rgba(20,96,184,.45);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; transition: transform .2s;
+}
+#cg-chat-btn:hover { transform: scale(1.08); }
+#cg-chat-badge {
+  position: absolute; top: -2px; right: -2px;
+  background: #e84444; color: #fff; font-size: .65rem;
+  font-weight: 700; width: 18px; height: 18px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  border: 2px solid #fff;
+}
+
+#cg-chat-window {
+  display: none; flex-direction: column;
+  position: absolute; bottom: 72px; right: 0;
+  width: 340px; height: 460px;
+  background: #fff; border-radius: 16px;
+  box-shadow: 0 12px 48px rgba(0,0,0,.18);
+  overflow: hidden; animation: cgSlideUp .25s ease;
+}
+@keyframes cgSlideUp { from { opacity:0; transform: translateY(16px); } to { opacity:1; transform: translateY(0); } }
+
+#cg-chat-header {
+  background: linear-gradient(135deg, #0e2258, #1460b8);
+  color: #fff; padding: 14px 16px;
+  display: flex; align-items: center; gap: 12px;
+}
+.cg-header-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: rgba(255,255,255,.2); display: flex;
+  align-items: center; justify-content: center; font-size: 1.1rem;
+}
+.cg-header-name { font-weight: 700; font-size: .95rem; }
+.cg-header-status { font-size: .75rem; color: rgba(255,255,255,.8); display: flex; align-items: center; gap: 5px; }
+.cg-dot { width: 7px; height: 7px; border-radius: 50%; background: #4cde80; display: inline-block; }
+.cg-header-close { margin-left: auto; background: none; border: none; color: rgba(255,255,255,.8); font-size: 1rem; cursor: pointer; }
+.cg-header-close:hover { color: #fff; }
+
+#cg-chat-messages {
+  flex: 1; overflow-y: auto; padding: 16px 14px 8px;
+  background: #f5f7fb; display: flex; flex-direction: column; gap: 8px;
+}
+.cg-msg-time { text-align: center; font-size: .7rem; color: #aaa; margin-bottom: 4px; }
+.cg-msg { display: flex; }
+.cg-msg.bot { justify-content: flex-start; }
+.cg-msg.user { justify-content: flex-end; }
+.cg-bubble {
+  max-width: 78%; padding: 10px 14px; border-radius: 16px;
+  font-size: .85rem; line-height: 1.5;
+}
+.cg-msg.bot .cg-bubble { background: #fff; color: #222; border-radius: 4px 16px 16px 16px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.cg-msg.user .cg-bubble { background: #1460b8; color: #fff; border-radius: 16px 4px 16px 16px; }
+
+.cg-quick-replies { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 4px; }
+.cg-quick-replies button {
+  background: #fff; border: 1.5px solid #1460b8; color: #1460b8;
+  border-radius: 20px; padding: 5px 13px; font-size: .78rem;
+  cursor: pointer; transition: all .18s;
+}
+.cg-quick-replies button:hover { background: #1460b8; color: #fff; }
+
+#cg-chat-input-bar {
+  display: flex; align-items: center; padding: 10px 12px;
+  border-top: 1px solid #e8edf5; background: #fff; gap: 8px;
+}
+#cg-chat-input {
+  flex: 1; border: 1.5px solid #dde3f0; border-radius: 20px;
+  padding: 8px 14px; font-size: .85rem; outline: none;
+  transition: border .2s;
+}
+#cg-chat-input:focus { border-color: #1460b8; }
+#cg-chat-input-bar button {
+  background: #1460b8; color: #fff; border: none;
+  width: 36px; height: 36px; border-radius: 50%;
+  font-size: .95rem; cursor: pointer; display: flex;
+  align-items: center; justify-content: center; transition: background .2s;
+}
+#cg-chat-input-bar button:hover { background: #1a7ae0; }
+
+</style>
+
+<script>
+function toggleChat() {
+  const win = document.getElementById('cg-chat-window');
+  const icon = document.getElementById('cg-chat-icon');
+  const closeIcon = document.getElementById('cg-chat-close');
+  const badge = document.getElementById('cg-chat-badge');
+  const isOpen = win.style.display === 'flex';
+  win.style.display = isOpen ? 'none' : 'flex';
+  icon.style.display = isOpen ? '' : 'none';
+  closeIcon.style.display = isOpen ? 'none' : '';
+  if (!isOpen) badge.style.display = 'none';
+}
+
+const botReplies = {
+  'our services': "We offer IT solutions, HR recruitment, career development programs, and educational initiatives. Would you like to know more about any specific service?",
+  'career opportunities': "🎯 We have exciting openings across multiple domains! Please visit our <strong>Careers</strong> section or send your resume to careers@chandanagroups.com.",
+  'contact support': "📞 You can reach us at <strong>+91 98765 43210</strong> or email <strong>info@chandanagroups.com</strong>. We're available Mon–Sat, 9AM–6PM.",
+  'our companies': "🏢 Our group includes:<br>• Chandana IT Solutions<br>• JobNest HR Solutions<br>• Chandana Tech Careers<br>• Sri Sharada Nikethana",
+  'default': "Thanks for your message! Our team will get back to you shortly. You can also call us at <strong>+91 98765 43210</strong>. 😊"
+};
+
+function addMessage(text, sender) {
+  const msgs = document.getElementById('cg-chat-messages');
+  const div = document.createElement('div');
+  div.className = 'cg-msg ' + sender;
+  div.innerHTML = '<div class="cg-bubble">' + text + '</div>';
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function quickReply(text) {
+  document.querySelector('.cg-quick-replies') && document.querySelector('.cg-quick-replies').remove();
+  addMessage(text, 'user');
+  setTimeout(() => {
+    const key = text.toLowerCase();
+    addMessage(botReplies[key] || botReplies['default'], 'bot');
+  }, 600);
+}
+
+function sendMessage() {
+  const input = document.getElementById('cg-chat-input');
+  const text = input.value.trim();
+  if (!text) return;
+  document.querySelector('.cg-quick-replies') && document.querySelector('.cg-quick-replies').remove();
+  addMessage(text, 'user');
+  input.value = '';
+  setTimeout(() => {
+    const key = Object.keys(botReplies).find(k => text.toLowerCase().includes(k));
+    addMessage(botReplies[key] || botReplies['default'], 'bot');
+  }, 700);
+}
+</script>
+<style>
+
+.cl-badge {
+  font-weight: 700;
+  font-size: .88rem;
+  letter-spacing: .03em;
+  padding: 6px 14px;
+  border: 2px solid;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+/* ── NEW FOOTER STYLES ── */
+.footer-bar { background: linear-gradient(160deg, #0a1535 0%, #0e2258 60%, #163480 100%); padding: 50px 0 0; }
+
+.f-brand { color: #fff; font-size: 1.35rem; font-weight: 700; margin-bottom: 14px; }
+.f-tagline { color: rgba(180,210,255,.75); font-size: .875rem; line-height: 1.7; margin: 0; }
+.f-col-title { color: #fff; font-size: .95rem; font-weight: 700; margin-bottom: 16px; letter-spacing: .02em; }
+.f-col-list { list-style: none; padding: 0; margin: 0; }
+.f-col-list li { margin-bottom: 10px; }
+.f-col-list li a { color: rgba(180,210,255,.75); text-decoration: none; font-size: .875rem; transition: color .2s; }
+.f-col-list li a:hover { color: #fff; }
+.f-newsletter-sub { color: rgba(180,210,255,.65); font-size: .82rem; margin-bottom: 12px; }
+.f-newsletter-row { display: flex; gap: 0; }
+.f-newsletter-input {
+  flex: 1; padding: 9px 14px; border: 1px solid rgba(255,255,255,.2);
+  border-radius: 5px 0 0 5px; background: rgba(255,255,255,.08);
+  color: #fff; font-size: .82rem; outline: none;
+}
+.f-newsletter-input::placeholder { color: rgba(255,255,255,.4); }
+.f-newsletter-btn {
+  padding: 9px 16px; background: #1460b8; color: #fff;
+  border: none; border-radius: 0 5px 5px 0; font-size: .82rem;
+  font-weight: 600; cursor: pointer; white-space: nowrap; transition: background .2s;
+}
+.f-newsletter-btn:hover { background: #1a7ae0; }
+.f-bottom-bar {
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid rgba(255,255,255,.12); padding: 16px 0 10px; margin-top: 10px;
+  flex-wrap: wrap; gap: 10px;
+}
+.f-bottom-left a { color: rgba(255,255,255,.65); text-decoration: none; font-size: .79rem; transition: color .2s; }
+.f-bottom-left a:hover { color: #fff; }
+.f-divider { color: rgba(255,255,255,.3); margin: 0 10px; font-size: .75rem; }
+.f-bottom-right { display: flex; gap: 10px; }
+.f-copy { color: rgba(255,255,255,.35); font-size: .74rem; text-align: center; padding: 10px 0 18px; margin: 0; }
+</style>
+</html>
