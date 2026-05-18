@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.9 on win32)" generated="2026-03-09T20:21:25.008867" rpa="false" schemaversion="5">
+<suite id="s1" name="Framework" source="C:\Users\Sinchana S N\Desktop\INTERNSHIP\tests\framework.robot">
+<test id="s1-t1" name="Login Trackclock HR Test" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-09T20:21:25.554807" level="INFO">Opening browser 'chrome' to base url 'https://devtesting.chandanaitsolutions.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-09T20:21:25.554224" elapsed="3.519077"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-09T20:21:29.074199" elapsed="0.065970"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-09T20:21:29.141775" level="INFO">Typing text 'MG001' into text field 'name=username'.</msg>
+<arg>name=username</arg>
+<arg>MG001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T20:21:29.140826" elapsed="0.303129"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-09T20:21:29.445526" level="INFO">Typing text 'MG001' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>MG001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T20:21:29.444781" elapsed="0.202541"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-03-09T20:21:29.648572" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-09T20:21:29.647998" elapsed="0.197178"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-03-09T20:21:29.845697" elapsed="1.179539"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-09T20:21:31.026013" elapsed="2.332032"/>
+</kw>
+<status status="PASS" start="2026-03-09T20:21:25.552170" elapsed="7.806689"/>
+</test>
+<status status="PASS" start="2026-03-09T20:21:25.012612" elapsed="8.348170"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Framework" id="s1" pass="1" fail="0" skip="0">Framework</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
